@@ -1,0 +1,23 @@
+TXN_DATE,TXN_TYPE,TXN_SHARES,TXN_PRICE,FUND,INVESTOR,ADVISOR
+7/29/21,BUY,10,$5.50 ,BOND FUND,"Dewey, Cheetum & Howe, Assoc","Darryl ""Moose"" Johnston"
+8/1/21,BUY,40,$10.00 ,STOCK FUND,"Dewey, Cheetum & Howe, Assoc","Darryl ""Moose"" Johnston"
+8/2/21,BUY,500,$10.03 ,STOCK FUND,"John Doe & Assoc
+A Professional Corporation",James A. Garfield
+8/2/21,BUY,100,$5.50 ,BOND FUND,John Q. Adams,"Darryl ""Moose"" Johnston"
+8/5/21,BUY,500,$9.96 ,STOCK FUND,"John Doe & Assoc
+A Professional Corporation",James A. Garfield
+8/6/21,BUY,500,$9.67 ,STOCK FUND,"John Doe & Assoc
+A Professional Corporation",James A. Garfield
+8/6/21,BUY,400,$9.67 ,STOCK FUND,Jane Doe,James A. Garfield
+8/8/21,BUY,10,$9.50 ,STOCK FUND,"Dewey, Cheetum & Howe, Assoc","Darryl ""Moose"" Johnston"
+8/8/21,BUY,100,$9.50 ,STOCK FUND,"John Doe & Assoc
+A Professional Corporation",James A. Garfield
+8/9/21,BUY,5,$5.55 ,BOND FUND,"Dewey, Cheetum & Howe, Assoc","Darryl ""Moose"" Johnston"
+8/9/21,BUY,350,$9.45 ,STOCK FUND,Jane Doe,James A. Garfield
+8/9/21,BUY,100,$5.55 ,BOND FUND,John Q. Adams,"Darryl ""Moose"" Johnston"
+8/9/21,SELL,1000,$9.45 ,STOCK FUND,"John Doe & Assoc
+A Professional Corporation",James A. Garfield
+8/12/21,BUY,500,$9.55 ,STOCK FUND,"John Doe & Assoc
+A Professional Corporation",James A. Garfield
+8/12/21,SELL,150,$5.56 ,BOND FUND,John Q. Adams,"Darryl ""Moose"" Johnston"
+8/15/21,SELL,55,$10.25 ,STOCK FUND,"Dewey, Cheetum & Howe, Assoc","Darryl ""Moose"" Johnston"
