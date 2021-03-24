@@ -5,16 +5,9 @@ const inquirer = require('inquirer');
 //Connects to database
 const connection = mysql.createConnection({
     host: "localhost",
-
-    // Your port; if not 3306
     port: 3306,
-
-    // Your username
     user: "root",
-
-    // Your password
     password: "password",
-
     database: "aixTestData"
 });
 
@@ -28,6 +21,7 @@ connection.connect(function (err) {
 
 //Runs at the start of the page
 const startPage = () => {
+    //Gets all data from csv file which has been imported into mysql
     connection.query("SELECT*FROM aixtestdata", function (err, results) {
         if (err) throw err;
         let json = makeJSON(results);
@@ -40,13 +34,13 @@ const startPage = () => {
         }
         advisorArray = Array.from(advisorArray);
 
-
+        //Prompts the user for the advisor they want to see and what type of report
         inquirer
             .prompt([
                 {
                     name: "advisor",
                     type: "list",
-                    message: "What advisor would you like to see a summary for?",
+                    message: "Which advisor would you like to see a summary for?",
                     choices: function () {
                         let choicesArray = [];
                         for (let i = 0; i < advisorArray.length; i++) {
@@ -88,13 +82,13 @@ const startPage = () => {
 
                     let month = new Date();
                     month = month.getMonth();
+                    //Adding one as the csv file uses standard 1, 2, 3... for the months and doesn't start at 0
                     month += 1;
                     month = month.toString();
 
                     let year = getYear();
 
                     let cashTotal = 0;
-
                     for (let i = 0; i < json.length; i++) {
                         let dateString = json[i].TXN_DATE;
                         dateString = dateString.split("/");
@@ -136,7 +130,7 @@ const startPage = () => {
                     }
 
                     restartProgram(cashTotal, advisorSelected);
-
+                    
                 } else if (reportType == "inception to date"){
 
                     //Add together all of the values from that advisor
@@ -155,7 +149,6 @@ const startPage = () => {
                     //Ends the program
                     connection.end();
                 }
-
             })
     });
 }
@@ -172,7 +165,6 @@ const getYear = () => {
     let todayDate = new Date().getFullYear();
     todayDate = todayDate.toString();
     todayDate = todayDate.substring(2);
-
     return todayDate;
 }
 
