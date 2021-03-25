@@ -187,7 +187,7 @@ const pickQuarter = num => {
 //Takes in the $ value to display and the advisor's name to display, then restarte the program
 const restartProgram = (cashValue, advisorName) => {
     cashValue = cashValue.toFixed(2);
-    console.log(`Inception to date sales for ${advisorName}: ${cashValue}`);
+    console.log(`Sales for ${advisorName}: ${cashValue}`);
     console.log("RESTARTING PROGRAM");
     startPage();
 }
